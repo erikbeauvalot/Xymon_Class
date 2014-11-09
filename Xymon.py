@@ -1,11 +1,7 @@
 
-
-import logging
 import os
 import datetime
 
-
-_logger = logging.getLogger(__name__)
 
 class Xymon(object):
 
@@ -14,7 +10,6 @@ class Xymon(object):
 	purple = 2
 	yellow = 4
 	red = 3
-	log = logging.getLogger(__name__)
 
 	""" Xymon monitoring object """
 	def __init__(self,
@@ -64,6 +59,7 @@ class Xymon(object):
 		self.msg = self.report  + " " + self.text
 		command = str(self.XYMON) + " " + str(self.XYMSRV) + " " + str(self.msg)
 		if self.debug :
+			print self.print_debug()
 			print command
 		else:
 			os.system(command)

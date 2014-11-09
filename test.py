@@ -3,7 +3,7 @@
 
 from Xymon import Xymon
 
-xymon = Xymon()
+xymon = Xymon(debug=1)
 
 xymon.print_line("GREEN ADDITIONAL TEXT COLORED")
 xymon.print_line("ADDITIONAL TEXT")
