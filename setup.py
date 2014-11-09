@@ -1,6 +1,12 @@
+
 from setuptools import setup, find_packages  # Always prefer setuptools over distutils
 from codecs import open  # To use a consistent encoding
 from os import path
+
+def read(*paths):
+    """Build a file path from *paths* and return the contents."""
+    with open(os.path.join(*paths), 'r') as f:
+        return f.read()
 
 here = path.abspath(path.dirname(__file__))
 
@@ -19,6 +25,8 @@ setup(
     description='A simple Class to manipulate Xymon test script',
     long_description=long_description,
 
+    py_modules=['Xymon_Class'],
+    
     # The project's main homepage.
     url='https://github.com/erikbeauvalot/Xymon_Class',
 
